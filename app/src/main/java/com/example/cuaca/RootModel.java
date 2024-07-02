@@ -2,6 +2,8 @@ package com.example.cuaca;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class RootModel {
     @SerializedName("list")
     private List<ListModel> listModelList;

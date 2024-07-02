@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         _recyclerView1 = (RecyclerView) findViewById(R.id.recyclerView1);
-        _swipeRefreshLayout1 = (SwipeRefreshLayout) findViewById(R.id.swipeRefreshLayout1);
+        _swipeRefreshLayout1 = findViewById(R.id.swipeRefreshLayout1);
 
         initRecyclerView1();
         initSwipeRefreshLayout();
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onRefresh() {
                 initRecyclerView1();
-                _swipeRefreshLayout1.setOnRefreshing(false);
+                _swipeRefreshLayout1.setRefreshing(false);
             }
         });
     }
