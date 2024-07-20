@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private SwipeRefreshLayout _swipeRefreshLayout1;
     private RootModel _rootModel;
     private TextView _totalTextView;
-    private Button _buttonViewCityInfo;
+    private TextView _textViewCityInfo;
 
     @SuppressLint("MissingInflatedId")
 
@@ -50,9 +50,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initButtonViewCityInfo() {
-        _buttonViewCityInfo = findViewById(R.id.buttonView_cityInfo);
+        _textViewCityInfo = findViewById(R.id.textView_cityInfo);
 
-        _buttonViewCityInfo.setOnClickListener(new View.OnClickListener (){
+        _textViewCityInfo.setOnClickListener(new View.OnClickListener (){
             @Override
             public void onClick(View v) {
                 CityModel cm = _rootModel.getCityModel();
@@ -123,6 +123,6 @@ public class MainActivity extends AppCompatActivity {
                 "Matahari terbit" + sunriseTime + "(Lokal)\n" +
                 "Matahari terbenam" + sunsetTime + "(Lokal)";
 
-        _buttonViewCityInfo.setText(cityInfo);
+        _textViewCityInfo.setText(cityInfo);
     }
 }
